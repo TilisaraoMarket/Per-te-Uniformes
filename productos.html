@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -30,15 +31,28 @@
     <nav class="bg-white shadow-lg fixed w-full z-50">
         <div class="container mx-auto px-4">
             <div class="flex justify-between items-center py-4">
+                <!-- Logo / Title -->
                 <div class="flex items-center">
                     <h1 class="text-2xl font-bold text-blue-600">Per-te Uniformes</h1>
                 </div>
-                <div class="hidden md:flex space-x-8">
+                <!-- Navigation Links (Desktop) -->
+                <div class="hidden md:flex space-x-8" id="navbar-links">
                     <a href="index.html" class="text-gray-700 hover:text-blue-600 transition duration-300">Inicio</a>
                     <a href="productos.html" class="text-blue-600 font-semibold">Productos</a>
                     <a href="colegios.html" class="text-gray-700 hover:text-blue-600 transition duration-300">Colegios</a>
                     <a href="contacto.html" class="text-gray-700 hover:text-blue-600 transition duration-300">Contacto</a>
                 </div>
+                <!-- Mobile Nav Toggle Button -->
+                <button class="md:hidden" id="nav-toggle-btn">
+                    <i class="ph-list text-2xl"></i>
+                </button>
+            </div>
+            <!-- Navigation Links (Mobile) -->
+            <div class="hidden flex-col space-y-4 pb-4 md:hidden" id="mobile-menu">
+                <a href="index.html" class="text-gray-700 hover:text-blue-600 transition duration-300">Inicio</a>
+                <a href="productos.html" class="text-blue-600 font-semibold">Productos</a>
+                <a href="colegios.html" class="text-gray-700 hover:text-blue-600 transition duration-300">Colegios</a>
+                <a href="contacto.html" class="text-gray-700 hover:text-blue-600 transition duration-300">Contacto</a>
             </div>
         </div>
     </nav>
@@ -228,9 +242,18 @@
     </footer>
 
     <script>
+        // Initialize AOS
         AOS.init({
             duration: 1000,
             once: true
+        });
+
+        // Toggle Mobile Menu
+        const toggleBtn = document.getElementById('nav-toggle-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        toggleBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
         });
 
         // Manejo de filtros de categorías

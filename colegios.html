@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -29,12 +30,24 @@
                 <div class="flex items-center">
                     <h1 class="text-2xl font-bold text-blue-600">Per-te Uniformes</h1>
                 </div>
-                <div class="hidden md:flex space-x-8">
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex space-x-8" id="navbar-links">
                     <a href="index.html" class="text-gray-700 hover:text-blue-600 transition duration-300">Inicio</a>
                     <a href="productos.html" class="text-gray-700 hover:text-blue-600 transition duration-300">Productos</a>
                     <a href="colegios.html" class="text-blue-600 font-semibold">Colegios</a>
                     <a href="contacto.html" class="text-gray-700 hover:text-blue-600 transition duration-300">Contacto</a>
                 </div>
+                <!-- Mobile Nav Button -->
+                <button class="md:hidden" id="nav-toggle-btn">
+                    <i class="ph-list text-2xl"></i>
+                </button>
+            </div>
+            <!-- Mobile Navigation Links -->
+            <div class="hidden flex-col space-y-4 pb-4 md:hidden" id="mobile-menu">
+                <a href="index.html" class="text-gray-700 hover:text-blue-600 transition duration-300">Inicio</a>
+                <a href="productos.html" class="text-gray-700 hover:text-blue-600 transition duration-300">Productos</a>
+                <a href="colegios.html" class="text-blue-600 font-semibold">Colegios</a>
+                <a href="contacto.html" class="text-gray-700 hover:text-blue-600 transition duration-300">Contacto</a>
             </div>
         </div>
     </nav>
@@ -220,10 +233,19 @@
     </footer>
 
     <script>
+        // Initialize AOS
         AOS.init({
             duration: 1000,
             once: true
         });
+
+        // Toggle Mobile Menu
+        const toggleBtn = document.getElementById('nav-toggle-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        toggleBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
     </script>
 </body>
-</html></qodoArtifact>
+</html>
