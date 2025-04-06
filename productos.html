@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos - Per-te Uniformes Escolares</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <!-- AOS Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <style>
+        .product-card {
+            transition: all 0.3s ease;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .category-button.active {
+            background-color: #2563eb;
+            color: white;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navbar -->
+    <nav class="bg-white shadow-lg fixed w-full z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <h1 class="text-2xl font-bold text-blue-600">Per-te Uniformes</h1>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-gray-700 hover:text-blue-600 transition duration-300">Inicio</a>
+                    <a href="productos.html" class="text-blue-600 font-semibold">Productos</a>
+                    <a href="colegios.html" class="text-gray-700 hover:text-blue-600 transition duration-300">Colegios</a>
+                    <a href="contacto.html" class="text-gray-700 hover:text-blue-600 transition duration-300">Contacto</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <div class="bg-blue-600 pt-24">
+        <div class="container mx-auto px-4 py-16 text-white">
+            <h2 class="text-4xl font-bold mb-4" data-aos="fade-right">Nuestros Productos</h2>
+            <p class="text-xl text-blue-100" data-aos="fade-right" data-aos-delay="100">
+                Descubre nuestra amplia gama de uniformes escolares de alta calidad
+            </p>
+        </div>
+    </div>
+
+    <!-- Filtros y Categorías -->
+    <div class="container mx-auto px-4 py-8">
+        <div class="flex flex-wrap gap-4 mb-8" data-aos="fade-up">
+            <button class="category-button active px-6 py-2 rounded-full bg-gray-200 hover:bg-blue-600 hover:text-white transition duration-300">
+                Todos
+            </button>
+            <button class="category-button px-6 py-2 rounded-full bg-gray-200 hover:bg-blue-600 hover:text-white transition duration-300">
+                Guardapolvos
+            </button>
+            <button class="category-button px-6 py-2 rounded-full bg-gray-200 hover:bg-blue-600 hover:text-white transition duration-300">
+                Remeras
+            </button>
+            <button class="category-button px-6 py-2 rounded-full bg-gray-200 hover:bg-blue-600 hover:text-white transition duration-300">
+                Chambas
+            </button>
+            <button class="category-button px-6 py-2 rounded-full bg-gray-200 hover:bg-blue-600 hover:text-white transition duration-300">
+                Camperas
+            </button>
+            <button class="category-button px-6 py-2 rounded-full bg-gray-200 hover:bg-blue-600 hover:text-white transition duration-300">
+                Ponchos
+            </button>
+        </div>
+
+        <!-- Productos Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Guardapolvo -->
+            <div class="product-card bg-white rounded-xl overflow-hidden shadow-md" data-aos="fade-up">
+                <div class="relative">
+                    <div class="bg-gray-200 h-64 w-full"></div>
+                    <div class="absolute top-4 right-4">
+                        <span class="bg-blue-600 text-white px-4 py-1 rounded-full text-sm">Destacado</span>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2">Guardapolvo Clásico</h3>
+                    <p class="text-gray-600 mb-4">Confeccionado con los mejores materiales para mayor durabilidad</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">Tela Premium</span>
+                        <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">Todos los talles</span>
+                        <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">A medida</span>
+                    </div>
+                    <button class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition duration-300">
+                        Consultar
+                    </button>
+                </div>
+            </div>
+
+            <!-- Remera -->
+            <div class="product-card bg-white rounded-xl overflow-hidden shadow-md" data-aos="fade-up" data-aos-delay="100">
+                <div class="relative">
+                    <div class="bg-gray-200 h-64 w-full"></div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2">Remera Escolar</h3>
+                    <p class="text-gray-600 mb-4">Disponible en manga corta y larga, con logo institucional</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">Algodón</span>
+                        <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">Personalizable</span>
+                        <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">Varios colores</span>
+                    </div>
+                    <button class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition duration-300">
+                        Consultar
+                    </button>
+                </div>
+            </div>
+
+            <!-- Chamba -->
+            <div class="product-card bg-white rounded-xl overflow-hidden shadow-md" data-aos="fade-up" data-aos-delay="200">
+                <div class="relative">
+                    <div class="bg-gray-200 h-64 w-full"></div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2">Chamba Institucional</h3>
+                    <p class="text-gray-600 mb-4">Diseño moderno y cómodo para uso diario</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">Abrigada</span>
+                        <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">Durable</span>
+                        <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">Con bolsillos</span>
+                    </div>
+                    <button class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition duration-300">
+                        Consultar
+                    </button>
+                </div>
+            </div>
+
+            <!-- Campera -->
+            <div class="product-card bg-white rounded-xl overflow-hidden shadow-md" data-aos="fade-up">
+                <div class="relative">
+                    <div class="bg-gray-200 h-64 w-full"></div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2">Campera Escolar</h3>
+                    <p class="text-gray-600 mb-4">Máximo abrigo y resistencia para el invierno</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">Impermeable</span>
+                        <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">Forro polar</span>
+                        <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">Con capucha</span>
+                    </div>
+                    <button class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition duration-300">
+                        Consultar
+                    </button>
+                </div>
+            </div>
+
+            <!-- Poncho -->
+            <div class="product-card bg-white rounded-xl overflow-hidden shadow-md" data-aos="fade-up" data-aos-delay="100">
+                <div class="relative">
+                    <div class="bg-gray-200 h-64 w-full"></div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2">Poncho Escolar</h3>
+                    <p class="text-gray-600 mb-4">Diseño tradicional con materiales de primera calidad</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">Lana premium</span>
+                        <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">Tejido artesanal</span>
+                        <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">Varios tamaños</span>
+                    </div>
+                    <button class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition duration-300">
+                        Consultar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sección de Información Adicional -->
+    <div class="bg-gray-100 py-16 mt-16">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center" data-aos="fade-up">
+                    <i class="ph-ruler text-4xl text-blue-600 mb-4"></i>
+                    <h4 class="text-xl font-semibold mb-2">Toma de Medidas</h4>
+                    <p class="text-gray-600">Servicio personalizado de toma de medidas para un ajuste perfecto</p>
+                </div>
+                <div class="text-center" data-aos="fade-up" data-aos-delay="100">
+                    <i class="ph-tag text-4xl text-blue-600 mb-4"></i>
+                    <h4 class="text-xl font-semibold mb-2">Precios Accesibles</h4>
+                    <p class="text-gray-600">La mejor relación calidad-precio del mercado</p>
+                </div>
+                <div class="text-center" data-aos="fade-up" data-aos-delay="200">
+                    <i class="ph-truck text-4xl text-blue-600 mb-4"></i>
+                    <h4 class="text-xl font-semibold mb-2">Entregas</h4>
+                    <p class="text-gray-600">Coordinamos entregas en toda la zona</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h4 class="text-xl font-bold mb-4">Per-te Uniformes</h4>
+                    <p class="text-gray-400">Tradición en uniformes escolares desde hace más de 15 años.</p>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold mb-4">Contacto</h4>
+                    <p class="text-gray-400">Teléfono: [Número]</p>
+                    <p class="text-gray-400">Email: [Email]</p>
+                    <p class="text-gray-400">Dirección: [Dirección]</p>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold mb-4">Horarios</h4>
+                    <p class="text-gray-400">Lunes a Viernes: 9:00 - 18:00</p>
+                    <p class="text-gray-400">Sábados: 9:00 - 13:00</p>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+                <p class="text-gray-400">&copy; 2024 Per-te Uniformes. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+
+        // Manejo de filtros de categorías
+        const categoryButtons = document.querySelectorAll('.category-button');
+        categoryButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                categoryButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>

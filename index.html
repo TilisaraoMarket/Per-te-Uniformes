@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Per-te Uniformes - Tradición en Uniformes Escolares</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <!-- AOS Library para animaciones -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <style>
+        .hero-pattern {
+            background-color: #1e40af;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%233b82f6' fill-opacity='0.4'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3Cpath d='M6 5V0H5v5H0v1h5v94h1V6h94V5H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        .testimonial-card {
+            transition: transform 0.3s ease;
+        }
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navbar -->
+    <nav class="bg-white shadow-lg fixed w-full z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <h1 class="text-2xl font-bold text-blue-600">Per-te Uniformes</h1>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-gray-700 hover:text-blue-600 transition duration-300">Inicio</a>
+                    <a href="productos.html" class="text-gray-700 hover:text-blue-600 transition duration-300">Productos</a>
+                    <a href="colegios.html" class="text-gray-700 hover:text-blue-600 transition duration-300">Colegios</a>
+                    <a href="contacto.html" class="text-gray-700 hover:text-blue-600 transition duration-300">Contacto</a>
+                </div>
+                <button class="md:hidden">
+                    <i class="ph-list text-2xl"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero-pattern text-white pt-24">
+        <div class="container mx-auto px-4 py-20">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right">
+                    <h2 class="text-5xl font-bold mb-6">Tradición y Calidad en Uniformes Escolares</h2>
+                    <p class="text-xl mb-8 text-blue-100">Más de 15 años vistiendo a los estudiantes de nuestra región con orgullo y distinción</p>
+                    <div class="flex space-x-4">
+                        <a href="productos.html" class="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition duration-300">
+                            Ver Catálogo
+                        </a>
+                        <a href="contacto.html" class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition duration-300">
+                            Contactar
+                        </a>
+                    </div>
+                </div>
+                <div class="hidden md:block" data-aos="fade-left">
+                    <!-- Aquí iría una imagen de un uniforme o estudiantes -->
+                    <div class="bg-blue-400 h-96 rounded-lg shadow-2xl"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Características -->
+    <div class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h3 class="text-3xl font-bold text-gray-800 mb-4">¿Por qué elegirnos?</h3>
+                <p class="text-gray-600">Nuestra experiencia nos respalda</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center p-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="ph-needle text-3xl text-blue-600"></i>
+                    </div>
+                    <h4 class="text-xl font-semibold mb-2">Confección a Medida</h4>
+                    <p class="text-gray-600">Cada prenda se ajusta perfectamente a cada estudiante</p>
+                </div>
+                <div class="text-center p-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="ph-check-circle text-3xl text-blue-600"></i>
+                    </div>
+                    <h4 class="text-xl font-semibold mb-2">Calidad Garantizada</h4>
+                    <p class="text-gray-600">Materiales duraderos y acabados perfectos</p>
+                </div>
+                <div class="text-center p-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="ph-heart text-3xl text-blue-600"></i>
+                    </div>
+                    <h4 class="text-xl font-semibold mb-2">Atención Personalizada</h4>
+                    <p class="text-gray-600">Asesoramiento experto para cada cliente</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Productos Destacados -->
+    <div class="bg-gray-50 py-20">
+        <div class="container mx-auto px-4">
+            <h3 class="text-3xl font-bold text-center mb-12">Nuestros Productos</h3>
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition duration-300" data-aos="fade-up">
+                    <div class="bg-gray-200 h-48"></div>
+                    <div class="p-6">
+                        <h4 class="text-xl font-semibold mb-2">Guardapolvos</h4>
+                        <p class="text-gray-600">Confección tradicional y moderna</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition duration-300" data-aos="fade-up" data-aos-delay="100">
+                    <div class="bg-gray-200 h-48"></div>
+                    <div class="p-6">
+                        <h4 class="text-xl font-semibold mb-2">Remeras</h4>
+                        <p class="text-gray-600">Para todos los colegios</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition duration-300" data-aos="fade-up" data-aos-delay="200">
+                    <div class="bg-gray-200 h-48"></div>
+                    <div class="p-6">
+                        <h4 class="text-xl font-semibold mb-2">Chambas</h4>
+                        <p class="text-gray-600">Diseños institucionales</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition duration-300" data-aos="fade-up" data-aos-delay="300">
+                    <div class="bg-gray-200 h-48"></div>
+                    <div class="p-6">
+                        <h4 class="text-xl font-semibold mb-2">Camperas</h4>
+                        <p class="text-gray-600">Máximo abrigo y calidad</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Testimonios -->
+    <div class="bg-white py-20">
+        <div class="container mx-auto px-4">
+            <h3 class="text-3xl font-bold text-center mb-12">Lo que dicen nuestros clientes</h3>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="testimonial-card bg-gray-50 p-6 rounded-lg" data-aos="fade-up">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-blue-200 rounded-full flex items-center justify-center">
+                            <i class="ph-user text-2xl text-blue-600"></i>
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="font-semibold">María González</h4>
+                            <p class="text-gray-600 text-sm">Madre de familia</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"Excelente calidad y atención. Los uniformes son perfectos y duran todo el año escolar."</p>
+                </div>
+                <!-- Más testimonios... -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Contacto Rápido -->
+    <div class="bg-blue-600 text-white py-20">
+        <div class="container mx-auto px-4 text-center">
+            <h3 class="text-3xl font-bold mb-6">¿Necesitas un uniforme?</h3>
+            <p class="text-xl mb-8">Contáctanos para una atención personalizada</p>
+            <a href="contacto.html" class="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition duration-300">
+                Contactar Ahora
+            </a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h4 class="text-xl font-bold mb-4">Per-te Uniformes</h4>
+                    <p class="text-gray-400">Tradición en uniformes escolares desde hace más de 15 años.</p>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold mb-4">Contacto</h4>
+                    <p class="text-gray-400">Teléfono: [Número]</p>
+                    <p class="text-gray-400">Email: [Email]</p>
+                    <p class="text-gray-400">Dirección: [Dirección]</p>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold mb-4">Horarios</h4>
+                    <p class="text-gray-400">Lunes a Viernes: 9:00 - 18:00</p>
+                    <p class="text-gray-400">Sábados: 9:00 - 13:00</p>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+                <p class="text-gray-400">&copy; 2024 Per-te Uniformes. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    </script>
+</body>
+</html></qodoArtifact>

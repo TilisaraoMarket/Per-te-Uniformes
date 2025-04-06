@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Per-te Uniformes Escolares</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <!-- AOS Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <style>
+        .contact-input {
+            transition: all 0.3s ease;
+        }
+        .contact-input:focus {
+            border-color: #2563eb;
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navbar -->
+    <nav class="bg-white shadow-lg fixed w-full z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <h1 class="text-2xl font-bold text-blue-600">Per-te Uniformes</h1>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-gray-700 hover:text-blue-600 transition duration-300">Inicio</a>
+                    <a href="productos.html" class="text-gray-700 hover:text-blue-600 transition duration-300">Productos</a>
+                    <a href="colegios.html" class="text-gray-700 hover:text-blue-600 transition duration-300">Colegios</a>
+                    <a href="contacto.html" class="text-blue-600 font-semibold">Contacto</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <div class="bg-blue-600 pt-24">
+        <div class="container mx-auto px-4 py-16 text-white">
+            <h2 class="text-4xl font-bold mb-4" data-aos="fade-right">Contáctanos</h2>
+            <p class="text-xl text-blue-100" data-aos="fade-right" data-aos-delay="100">
+                Estamos aquí para ayudarte con tus consultas sobre uniformes escolares
+            </p>
+        </div>
+    </div>
+
+    <!-- Sección Principal de Contacto -->
+    <div class="container mx-auto px-4 py-16">
+        <div class="grid md:grid-cols-2 gap-12">
+            <!-- Formulario de Contacto -->
+            <div class="bg-white rounded-xl shadow-lg p-8" data-aos="fade-right">
+                <h3 class="text-2xl font-bold mb-6">Envíanos un mensaje</h3>
+                <form id="contactForm" class="space-y-6">
+                    <div>
+                        <label class="block text-gray-700 mb-2" for="nombre">Nombre completo</label>
+                        <input type="text" id="nombre" name="nombre" 
+                            class="contact-input w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none"
+                            required>
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 mb-2" for="email">Correo electrónico</label>
+                        <input type="email" id="email" name="email" 
+                            class="contact-input w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none"
+                            required>
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 mb-2" for="telefono">Teléfono</label>
+                        <input type="tel" id="telefono" name="telefono" 
+                            class="contact-input w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none"
+                            required>
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 mb-2" for="asunto">Asunto</label>
+                        <select id="asunto" name="asunto" 
+                            class="contact-input w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none"
+                            required>
+                            <option value="">Selecciona un asunto</option>
+                            <option value="consulta">Consulta general</option>
+                            <option value="pedido">Realizar pedido</option>
+                            <option value="presupuesto">Solicitar presupuesto</option>
+                            <option value="institucional">Consulta institucional</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 mb-2" for="mensaje">Mensaje</label>
+                        <textarea id="mensaje" name="mensaje" rows="4" 
+                            class="contact-input w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none"
+                            required></textarea>
+                    </div>
+                    <button type="submit" 
+                        class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition duration-300">
+                        Enviar mensaje
+                    </button>
+                </form>
+            </div>
+
+            <!-- Información de Contacto -->
+            <div class="space-y-8" data-aos="fade-left">
+                <!-- Tarjeta de Información -->
+                <div class="bg-white rounded-xl shadow-lg p-8">
+                    <h3 class="text-2xl font-bold mb-6">Información de contacto</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <i class="ph-phone text-2xl text-blue-600 mr-4"></i>
+                            <div>
+                                <p class="font-semibold">Teléfono</p>
+                                <p class="text-gray-600">[Número de teléfono]</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="ph-envelope text-2xl text-blue-600 mr-4"></i>
+                            <div>
+                                <p class="font-semibold">Email</p>
+                                <p class="text-gray-600">[Correo electrónico]</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="ph-map-pin text-2xl text-blue-600 mr-4"></i>
+                            <div>
+                                <p class="font-semibold">Dirección</p>
+                                <p class="text-gray-600">[Dirección del local]</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="ph-clock text-2xl text-blue-600 mr-4"></i>
+                            <div>
+                                <p class="font-semibold">Horario de atención</p>
+                                <p class="text-gray-600">Lunes a Viernes: 9:00 - 18:00</p>
+                                <p class="text-gray-600">Sábados: 9:00 - 13:00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mapa -->
+                <div class="bg-white rounded-xl shadow-lg p-8">
+                    <h3 class="text-2xl font-bold mb-6">Ubicación</h3>
+                    <div class="bg-gray-200 h-64 rounded-lg">
+                        <!-- Aquí se puede integrar un mapa real -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sección FAQ -->
+    <div class="bg-gray-100 py-16">
+        <div class="container mx-auto px-4">
+            <h3 class="text-2xl font-bold text-center mb-12">Preguntas Frecuentes</h3>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white rounded-lg p-6 shadow-md" data-aos="fade-up">
+                    <h4 class="font-semibold mb-2">¿Cómo puedo realizar un pedido?</h4>
+                    <p class="text-gray-600">Puedes contactarnos a través del formulario, por teléfono o visitando nuestra tienda.</p>
+                </div>
+                <div class="bg-white rounded-lg p-6 shadow-md" data-aos="fade-up">
+                    <h4 class="font-semibold mb-2">¿Cuánto tiempo tarda la confección?</h4>
+                    <p class="text-gray-600">Los tiempos varían según el tipo de prenda y la cantidad. Consultanos para más detalles.</p>
+                </div>
+                <div class="bg-white rounded-lg p-6 shadow-md" data-aos="fade-up">
+                    <h4 class="font-semibold mb-2">¿Realizan envíos?</h4>
+                    <p class="text-gray-600">Sí, realizamos envíos a todas las localidades de la zona.</p>
+                </div>
+                <div class="bg-white rounded-lg p-6 shadow-md" data-aos="fade-up">
+                    <h4 class="font-semibold mb-2">¿Hacen arreglos de uniformes?</h4>
+                    <p class="text-gray-600">Sí, ofrecemos servicio de arreglos y ajustes para todas nuestras prendas.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h4 class="text-xl font-bold mb-4">Per-te Uniformes</h4>
+                    <p class="text-gray-400">Tradición en uniformes escolares desde hace más de 15 años.</p>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold mb-4">Redes Sociales</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="ph-facebook-logo text-2xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="ph-instagram-logo text-2xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="ph-whatsapp-logo text-2xl"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold mb-4">Newsletter</h4>
+                    <p class="text-gray-400 mb-4">Suscríbete para recibir novedades y ofertas</p>
+                    <div class="flex">
+                        <input type="email" placeholder="Tu email" 
+                            class="px-4 py-2 rounded-l-lg focus:outline-none flex-1">
+                        <button class="bg-blue-600 text-white px-4 py-2 rounded-r-lg hover:bg-blue-700 transition duration-300">
+                            Suscribirse
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+                <p class="text-gray-400">&copy; 2024 Per-te Uniformes. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+
+        // Manejo del formulario
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Aquí puedes agregar la lógica para enviar el formulario
+            alert('Mensaje enviado correctamente. Nos pondremos en contacto contigo pronto.');
+            this.reset();
+        });
+    </script>
+</body>
+</html></qodoArtifact>

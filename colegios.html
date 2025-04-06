@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colegios - Per-te Uniformes Escolares</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <!-- AOS Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <style>
+        .school-card {
+            transition: all 0.3s ease;
+        }
+        .school-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navbar -->
+    <nav class="bg-white shadow-lg fixed w-full z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <h1 class="text-2xl font-bold text-blue-600">Per-te Uniformes</h1>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-gray-700 hover:text-blue-600 transition duration-300">Inicio</a>
+                    <a href="productos.html" class="text-gray-700 hover:text-blue-600 transition duration-300">Productos</a>
+                    <a href="colegios.html" class="text-blue-600 font-semibold">Colegios</a>
+                    <a href="contacto.html" class="text-gray-700 hover:text-blue-600 transition duration-300">Contacto</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <div class="bg-blue-600 pt-24">
+        <div class="container mx-auto px-4 py-16 text-white">
+            <h2 class="text-4xl font-bold mb-4" data-aos="fade-right">Colegios Asociados</h2>
+            <p class="text-xl text-blue-100" data-aos="fade-right" data-aos-delay="100">
+                Confeccionamos uniformes para las principales instituciones educativas de la región
+            </p>
+        </div>
+    </div>
+
+    <!-- Mapa de Cobertura -->
+    <div class="container mx-auto px-4 py-16">
+        <div class="bg-white rounded-xl shadow-lg p-8 mb-16" data-aos="fade-up">
+            <h3 class="text-2xl font-bold mb-6 text-center">Nuestra Zona de Cobertura</h3>
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                    <div class="bg-gray-100 rounded-lg p-6">
+                        <h4 class="font-semibold mb-4">Principales localidades:</h4>
+                        <ul class="space-y-2">
+                            <li class="flex items-center">
+                                <i class="ph-map-pin text-blue-600 mr-2"></i>
+                                Tilisarao
+                            </li>
+                            <li class="flex items-center">
+                                <i class="ph-map-pin text-blue-600 mr-2"></i>
+                                Concarán
+                            </li>
+                            <li class="flex items-center">
+                                <i class="ph-map-pin text-blue-600 mr-2"></i>
+                                Villa del Carmen
+                            </li>
+                            <li class="flex items-center">
+                                <i class="ph-map-pin text-blue-600 mr-2"></i>
+                                Naschel
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="bg-gray-200 h-64 rounded-lg">
+                    <!-- Aquí se puede agregar un mapa real de la zona -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Grid de Colegios -->
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Colegio Técnico -->
+            <div class="school-card bg-white rounded-xl overflow-hidden shadow-md" data-aos="fade-up">
+                <div class="relative">
+                    <div class="bg-gray-200 h-48 w-full"></div>
+                    <div class="absolute top-4 right-4">
+                        <span class="bg-blue-600 text-white px-4 py-1 rounded-full text-sm">Técnico</span>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2">Colegio Técnico de Concarán</h3>
+                    <p class="text-gray-600 mb-4">Uniformes específicos para actividades técnicas y educación general</p>
+                    <div class="space-y-2">
+                        <div class="flex items-center text-sm text-gray-500">
+                            <i class="ph-clothes text-blue-600 mr-2"></i>
+                            Guardapolvos técnicos
+                        </div>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <i class="ph-t-shirt text-blue-600 mr-2"></i>
+                            Remeras institucionales
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Colegio 2 -->
+            <div class="school-card bg-white rounded-xl overflow-hidden shadow-md" data-aos="fade-up" data-aos-delay="100">
+                <div class="relative">
+                    <div class="bg-gray-200 h-48 w-full"></div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2">Instituto de Tilisarao</h3>
+                    <p class="text-gray-600 mb-4">Uniformes completos para todos los niveles educativos</p>
+                    <div class="space-y-2">
+                        <div class="flex items-center text-sm text-gray-500">
+                            <i class="ph-hoodie text-blue-600 mr-2"></i>
+                            Uniformes deportivos
+                        </div>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <i class="ph-jacket text-blue-600 mr-2"></i>
+                            Camperas institucionales
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Colegio 3 -->
+            <div class="school-card bg-white rounded-xl overflow-hidden shadow-md" data-aos="fade-up" data-aos-delay="200">
+                <div class="relative">
+                    <div class="bg-gray-200 h-48 w-full"></div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2">Escuela Villa del Carmen</h3>
+                    <p class="text-gray-600 mb-4">Uniformes tradicionales y modernos para todos los alumnos</p>
+                    <div class="space-y-2">
+                        <div class="flex items-center text-sm text-gray-500">
+                            <i class="ph-dress text-blue-600 mr-2"></i>
+                            Guardapolvos clásicos
+                        </div>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <i class="ph-pants text-blue-600 mr-2"></i>
+                            Conjuntos completos
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sección de Información -->
+    <div class="bg-gray-100 py-16 mt-16">
+        <div class="container mx-auto px-4">
+            <h3 class="text-2xl font-bold text-center mb-12">¿Por qué elegirnos?</h3>
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="text-center" data-aos="fade-up">
+                    <i class="ph-certificate text-4xl text-blue-600 mb-4"></i>
+                    <h4 class="text-lg font-semibold mb-2">Calidad Garantizada</h4>
+                    <p class="text-gray-600">Materiales de primera calidad y confección profesional</p>
+                </div>
+                <div class="text-center" data-aos="fade-up" data-aos-delay="100">
+                    <i class="ph-handshake text-4xl text-blue-600 mb-4"></i>
+                    <h4 class="text-lg font-semibold mb-2">Convenios Escolares</h4>
+                    <p class="text-gray-600">Trabajamos directamente con las instituciones</p>
+                </div>
+                <div class="text-center" data-aos="fade-up" data-aos-delay="200">
+                    <i class="ph-ruler text-4xl text-blue-600 mb-4"></i>
+                    <h4 class="text-lg font-semibold mb-2">A Medida</h4>
+                    <p class="text-gray-600">Ajustes personalizados para cada estudiante</p>
+                </div>
+                <div class="text-center" data-aos="fade-up" data-aos-delay="300">
+                    <i class="ph-clock text-4xl text-blue-600 mb-4"></i>
+                    <h4 class="text-lg font-semibold mb-2">Puntualidad</h4>
+                    <p class="text-gray-600">Entregas en tiempo y forma</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sección CTA -->
+    <div class="bg-blue-600 py-16">
+        <div class="container mx-auto px-4 text-center">
+            <h3 class="text-2xl font-bold text-white mb-4">¿Eres una institución educativa?</h3>
+            <p class="text-blue-100 mb-8">Contáctanos para establecer un convenio y brindar el mejor servicio a tus estudiantes</p>
+            <a href="contacto.html" class="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition duration-300">
+                Contactar
+            </a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h4 class="text-xl font-bold mb-4">Per-te Uniformes</h4>
+                    <p class="text-gray-400">Tradición en uniformes escolares desde hace más de 15 años.</p>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold mb-4">Contacto</h4>
+                    <p class="text-gray-400">Teléfono: [Número]</p>
+                    <p class="text-gray-400">Email: [Email]</p>
+                    <p class="text-gray-400">Dirección: [Dirección]</p>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold mb-4">Horarios</h4>
+                    <p class="text-gray-400">Lunes a Viernes: 9:00 - 18:00</p>
+                    <p class="text-gray-400">Sábados: 9:00 - 13:00</p>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+                <p class="text-gray-400">&copy; 2024 Per-te Uniformes. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    </script>
+</body>
+</html></qodoArtifact>
