@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -12,6 +11,14 @@
     <!-- AOS Library -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+          integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+          crossorigin=""/>
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+            integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+            crossorigin=""></script>
     <style>
         .school-card {
             transition: all 0.3s ease;
@@ -27,7 +34,9 @@
     <nav class="bg-white shadow-lg fixed w-full z-50">
         <div class="container mx-auto px-4">
             <div class="flex justify-between items-center py-4">
-                <div class="flex items-center">
+                <!-- Logo + Texto -->
+                <div class="flex items-center space-x-4">
+                    <img src="images/IMG-20250407-WA0026.jpg" alt="Logo Per-te Uniformes" class="h-12 w-auto">
                     <h1 class="text-2xl font-bold text-blue-600">Per-te Uniformes</h1>
                 </div>
                 <!-- Desktop Navigation -->
@@ -37,7 +46,7 @@
                     <a href="colegios.html" class="text-blue-600 font-semibold">Colegios</a>
                     <a href="contacto.html" class="text-gray-700 hover:text-blue-600 transition duration-300">Contacto</a>
                 </div>
-                <!-- Reemplazar el botón actual del menú móvil con esta versión -->
+                <!-- Botón para menú móvil -->
                 <button class="md:hidden flex items-center justify-center w-10 h-10 text-gray-700 hover:text-blue-600 transition duration-300" id="nav-toggle-btn">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
@@ -92,8 +101,8 @@
                         </ul>
                     </div>
                 </div>
-                <div class="bg-gray-200 h-64 rounded-lg">
-                    <!-- Aquí se puede agregar un mapa real de la zona -->
+                <div class="bg-gray-200 rounded-lg overflow-hidden">
+                    <div id="map" style="height: 400px;"></div>
                 </div>
             </div>
         </div>
@@ -176,7 +185,7 @@
                 <div class="text-center" data-aos="fade-up">
                     <i class="ph-certificate text-4xl text-blue-600 mb-4"></i>
                     <h4 class="text-lg font-semibold mb-2">Calidad Garantizada</h4>
-                    <p class="text-gray-600">Materiales de primera calidad y confección profesional</p>
+                    <p class="text-gray-600">Materiales de primera calidad y confección profesional, con telas Arciel</p>
                 </div>
                 <div class="text-center" data-aos="fade-up" data-aos-delay="100">
                     <i class="ph-handshake text-4xl text-blue-600 mb-4"></i>
@@ -220,7 +229,7 @@
                     <h4 class="text-xl font-bold mb-4">Contacto</h4>
                     <p class="text-gray-400">Teléfono: [Número]</p>
                     <p class="text-gray-400">Email: [Email]</p>
-                    <p class="text-gray-400">Dirección: [Dirección]</p>
+                    <p class="text-gray-400">Dirección: Calle Belgrano y 25 de Mayo, Tilisarao, San Luis</p>
                 </div>
                 <div>
                     <h4 class="text-xl font-bold mb-4">Horarios</h4>
@@ -235,7 +244,7 @@
     </footer>
 
     <script>
-        // Initialize AOS
+        // Inicializar AOS
         AOS.init({
             duration: 1000,
             once: true
@@ -247,6 +256,28 @@
 
         toggleBtn.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
+        });
+
+        // Inicializar el mapa con Leaflet
+        var map = L.map('map').setView([-32.7276, -65.2914], 10);
+
+        // Agregar la capa de OpenStreetMap
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© OpenStreetMap contributors'
+        }).addTo(map);
+
+        // Agregar marcadores para cada localidad
+        var locations = [
+            {name: "Tilisarao", coords: [-32.7276, -65.2914]},
+            {name: "Concarán", coords: [-32.5632, -65.2449]},
+            {name: "Villa del Carmen", coords: [-32.8947, -65.2914]},
+            {name: "Naschel", coords: [-32.9147, -65.3714]}
+        ];
+
+        locations.forEach(function(loc) {
+            L.marker(loc.coords)
+             .bindPopup(loc.name)
+             .addTo(map);
         });
     </script>
 </body>

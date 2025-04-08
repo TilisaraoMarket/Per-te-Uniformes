@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -24,6 +23,18 @@
             background-color: #2563eb;
             color: white;
         }
+        .p-6 {
+            padding: 0; /* Adjust padding as needed */
+        }
+        img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+        }
+        footer .container {
+            width: 100%;
+            max-width: 100% !important;
+        }
     </style>
 </head>
 <body class="bg-gray-50">
@@ -31,8 +42,9 @@
     <nav class="bg-white shadow-lg fixed w-full z-50">
         <div class="container mx-auto px-4">
             <div class="flex justify-between items-center py-4">
-                <!-- Logo / Title -->
-                <div class="flex items-center">
+                <!-- Logo + Texto -->
+                <div class="flex items-center space-x-4">
+                    <img src="images/IMG-20250407-WA0026.jpg" alt="Logo Per-te Uniformes" class="h-12 w-auto">
                     <h1 class="text-2xl font-bold text-blue-600">Per-te Uniformes</h1>
                 </div>
                 <!-- Navigation Links (Desktop) -->
@@ -42,7 +54,7 @@
                     <a href="colegios.html" class="text-gray-700 hover:text-blue-600 transition duration-300">Colegios</a>
                     <a href="contacto.html" class="text-gray-700 hover:text-blue-600 transition duration-300">Contacto</a>
                 </div>
-                <!-- Reemplazar el botón actual del menú móvil con esta versión -->
+                <!-- Botón para menú móvil -->
                 <button class="md:hidden flex items-center justify-center w-10 h-10 text-gray-700 hover:text-blue-600 transition duration-300" id="nav-toggle-btn">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
@@ -92,12 +104,11 @@
             </button>
         </div>
 
-        <!-- Productos Grid -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <!-- Guardapolvo -->
             <div class="product-card bg-white rounded-xl overflow-hidden shadow-md" data-aos="fade-up">
                 <div class="relative">
-                    <div class="bg-gray-200 h-64 w-full"></div>
+                    <img src="images/IMG-20250407-WA0011.jpg" alt="Guardapolvo Clásico" class="w-full h-64 object-cover">
                     <div class="absolute top-4 right-4">
                         <span class="bg-blue-600 text-white px-4 py-1 rounded-full text-sm">Destacado</span>
                     </div>
@@ -115,11 +126,11 @@
                     </button>
                 </div>
             </div>
-
+        
             <!-- Remera -->
             <div class="product-card bg-white rounded-xl overflow-hidden shadow-md" data-aos="fade-up" data-aos-delay="100">
                 <div class="relative">
-                    <div class="bg-gray-200 h-64 w-full"></div>
+                    <img src="images/IMG-20250407-WA0016.jpg" alt="Remera Escolar" class="w-full h-64 object-cover">
                 </div>
                 <div class="p-6">
                     <h3 class="text-xl font-semibold mb-2">Remera Escolar</h3>
@@ -134,11 +145,11 @@
                     </button>
                 </div>
             </div>
-
+        
             <!-- Chamba -->
             <div class="product-card bg-white rounded-xl overflow-hidden shadow-md" data-aos="fade-up" data-aos-delay="200">
                 <div class="relative">
-                    <div class="bg-gray-200 h-64 w-full"></div>
+                    <img src="images/IMG-20250407-WA0020.jpg" alt="Chamba Institucional" class="w-full h-64 object-cover">
                 </div>
                 <div class="p-6">
                     <h3 class="text-xl font-semibold mb-2">Chamba Institucional</h3>
@@ -153,11 +164,11 @@
                     </button>
                 </div>
             </div>
-
+        
             <!-- Campera -->
             <div class="product-card bg-white rounded-xl overflow-hidden shadow-md" data-aos="fade-up">
                 <div class="relative">
-                    <div class="bg-gray-200 h-64 w-full"></div>
+                    <img src="images/IMG-20250407-WA0009.jpg" alt="Campera Escolar" class="w-full h-64 object-cover">
                 </div>
                 <div class="p-6">
                     <h3 class="text-xl font-semibold mb-2">Campera Escolar</h3>
@@ -172,11 +183,11 @@
                     </button>
                 </div>
             </div>
-
+        
             <!-- Poncho -->
             <div class="product-card bg-white rounded-xl overflow-hidden shadow-md" data-aos="fade-up" data-aos-delay="100">
                 <div class="relative">
-                    <div class="bg-gray-200 h-64 w-full"></div>
+                    <img src="images/IMG-20250407-WA0001.jpg" alt="Poncho Escolar" class="w-full h-64 object-cover">
                 </div>
                 <div class="p-6">
                     <h3 class="text-xl font-semibold mb-2">Poncho Escolar</h3>
@@ -191,8 +202,50 @@
                     </button>
                 </div>
             </div>
+        
+            <!-- Guantes para Abanderados -->
+            <div class="product-card bg-white rounded-xl overflow-hidden shadow-md" data-aos="fade-up" data-aos-delay="100">
+                <div class="relative">
+                    <img src="images/IMG-20250407-WA0002.jpg" alt="Guantes para Abanderados" class="w-full h-64 object-cover">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2">Guantes para Abanderados</h3>
+                    <p class="text-gray-600 mb-4">Guantes ceremoniales blancos para actos escolares y eventos formales</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">Algodón Premium</span>
+                        <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">Ceremonial</span>
+                        <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">Formal</span>
+                        <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">Ajuste perfecto</span>
+                    </div>
+                    <button class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition duration-300">
+                        Consultar
+                    </button>
+                </div>
+            </div>
+        
+            <!-- Medias Escolares -->
+            <div class="product-card bg-white rounded-xl overflow-hidden shadow-md" data-aos="fade-up" data-aos-delay="100">
+                <div class="relative">
+                    <img src="images/IMG-20250407-WA0003.jpg" alt="Medias Escolares" class="w-full h-64 object-cover">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2">Medias Escolares</h3>
+                    <p class="text-gray-600 mb-4">
+                        Nuestras medias escolares están confeccionadas en algodón peinado y una mezcla de fibras elásticas que garantizan comodidad, durabilidad y transpirabilidad. Su diseño clásico y ajustado las hace ideales para complementar cualquier uniforme escolar durante todo el día.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">Algodón peinado</span>
+                        <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">Fibras elásticas</span>
+                        <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">Transpirable</span>
+                    </div>
+                    <button class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition duration-300">
+                        Consultar
+                    </button>
+                </div>
+            </div>
         </div>
     </div>
+    
 
     <!-- Sección de Información Adicional -->
     <div class="bg-gray-100 py-16 mt-16">
@@ -218,8 +271,8 @@
     </div>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12">
-        <div class="container mx-auto px-4">
+    <footer class="bg-gray-900 text-white py-12 mt-16">
+        <div class="w-full px-4">
             <div class="grid md:grid-cols-3 gap-8">
                 <div>
                     <h4 class="text-xl font-bold mb-4">Per-te Uniformes</h4>
@@ -229,7 +282,7 @@
                     <h4 class="text-xl font-bold mb-4">Contacto</h4>
                     <p class="text-gray-400">Teléfono: [Número]</p>
                     <p class="text-gray-400">Email: [Email]</p>
-                    <p class="text-gray-400">Dirección: [Dirección]</p>
+                    <p class="text-gray-400">Dirección: Calle Belgrano y 25 de Mayo, Tilisarao, San Luis</p>
                 </div>
                 <div>
                     <h4 class="text-xl font-bold mb-4">Horarios</h4>
