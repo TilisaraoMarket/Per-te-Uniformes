@@ -135,7 +135,7 @@
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <!-- Guardapolvo -->
-            <div class="product-card bg-white rounded-xl overflow-hidden shadow-md" data-aos="fade-up">
+            <div class="product-card bg-white rounded-xl overflow-hidden shadow-md" data-aos="fade-up" data-category="Guardapolvos">
                 <div class="relative">
                     <img src="images/IMG-20250407-WA0011.jpg" alt="Guardapolvo Clásico" class="w-full h-64 object-cover">
                     <div class="absolute top-4 right-4">
@@ -158,7 +158,7 @@
 
             
             <!-- Guardapolvo infantil -->
-            <div class="product-card bg-white rounded-xl overflow-hidden shadow-md" data-aos="fade-up">
+            <div class="product-card bg-white rounded-xl overflow-hidden shadow-md" data-aos="fade-up" data-category="Guardapolvos">
                 <div class="relative">
                     <img src="images/IMG-20250407-WA0000.jpg" alt="Guardapolvo Infantil" class="w-full h-64 object-cover">
                     <div class="absolute top-4 right-4">
@@ -181,7 +181,7 @@
             </div>
         
             <!-- Remera -->
-            <div class="product-card bg-white rounded-xl overflow-hidden shadow-md" data-aos="fade-up" data-aos-delay="100">
+            <div class="product-card bg-white rounded-xl overflow-hidden shadow-md" data-aos="fade-up" data-aos-delay="100" data-category="Remeras">
                 <div class="relative">
                     <!-- Swiper -->
                     <div class="swiper remeraSwiper">
@@ -224,7 +224,7 @@
             </div>
         
             <!-- Chamba -->
-            <div class="product-card bg-white rounded-xl overflow-hidden shadow-md" data-aos="fade-up" data-aos-delay="200">
+            <div class="product-card bg-white rounded-xl overflow-hidden shadow-md" data-aos="fade-up" data-aos-delay="200" data-category="Chambas">
                 <div class="relative">
                     <img src="images/IMG-20250407-WA0020.jpg" alt="Chamba Institucional" class="w-full h-64 object-cover">
                 </div>
@@ -243,7 +243,7 @@
             </div>
         
             <!-- Campera -->
-            <div class="product-card bg-white rounded-xl overflow-hidden shadow-md" data-aos="fade-up">
+            <div class="product-card bg-white rounded-xl overflow-hidden shadow-md" data-aos="fade-up" data-category="Camperas">
                 <div class="relative">
                     <img src="images/IMG-20250407-WA0009.jpg" alt="Campera Escolar" class="w-full h-64 object-cover">
                 </div>
@@ -262,7 +262,7 @@
             </div>
         
             <!-- Poncho -->
-            <div class="product-card bg-white rounded-xl overflow-hidden shadow-md" data-aos="fade-up" data-aos-delay="100">
+            <div class="product-card bg-white rounded-xl overflow-hidden shadow-md" data-aos="fade-up" data-aos-delay="100" data-category="Ponchos">
                 <div class="relative">
                     <img src="images/IMG-20250407-WA0004.jpg" alt="Poncho Escolar" class="w-full h-64 object-cover">
                 </div>
@@ -281,7 +281,7 @@
             </div>
 
             <!-- Buzos para Jardín -->
-            <div class="product-card bg-white rounded-xl overflow-hidden shadow-md" data-aos="fade-up" data-aos-delay="100">
+            <div class="product-card bg-white rounded-xl overflow-hidden shadow-md" data-aos="fade-up" data-aos-delay="100" data-category="Buzos para Jardín">
                 <div class="relative">
                     <img src="images/IMG-20250407-WA0005.jpg" alt="Guantes para Abanderados" class="w-full h-64 object-cover">
                 </div>
@@ -301,7 +301,7 @@
             </div>
         
             <!-- Guantes para Abanderados -->
-            <div class="product-card bg-white rounded-xl overflow-hidden shadow-md" data-aos="fade-up" data-aos-delay="100">
+            <div class="product-card bg-white rounded-xl overflow-hidden shadow-md" data-aos="fade-up" data-aos-delay="100" data-category="Guantes para Abanderados">
                 <div class="relative">
                     <img src="images/IMG-20250407-WA0002.jpg" alt="Guantes para Abanderados" class="w-full h-64 object-cover">
                 </div>
@@ -321,7 +321,7 @@
             </div>
         
             <!-- Medias Escolares -->
-            <div class="product-card bg-white rounded-xl overflow-hidden shadow-md" data-aos="fade-up" data-aos-delay="100">
+            <div class="product-card bg-white rounded-xl overflow-hidden shadow-md" data-aos="fade-up" data-aos-delay="100" data-category="Medias Escolares">
                 <div class="relative">
                     <img src="images/IMG-20250407-WA0003.jpg" alt="Medias Escolares" class="w-full h-64 object-cover">
                 </div>
@@ -439,10 +439,30 @@
 
         // Manejo de filtros de categorías
         const categoryButtons = document.querySelectorAll('.category-button');
+        const productCards = document.querySelectorAll('.product-card');
+        
         categoryButtons.forEach(button => {
             button.addEventListener('click', () => {
+                // Update active button
                 categoryButtons.forEach(btn => btn.classList.remove('active'));
                 button.classList.add('active');
+                
+                // Get selected category
+                const selectedCategory = button.textContent.trim();
+                
+                // Filter products
+                productCards.forEach(card => {
+                    if (selectedCategory === 'Todos') {
+                        card.style.display = 'block';
+                    } else {
+                        const cardCategory = card.getAttribute('data-category');
+                        if (cardCategory === selectedCategory) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    }
+                });
             });
         });
         
