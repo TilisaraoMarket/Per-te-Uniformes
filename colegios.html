@@ -29,7 +29,8 @@
         }
     </style>
 </head>
-<body class="bg-gray-50">
+<!-- Se utiliza flex y min-h-screen en el body para poder empujar el footer al final -->
+<body class="bg-gray-50 flex flex-col min-h-screen">
     <!-- Navbar -->
     <nav class="bg-white shadow-lg fixed w-full z-50">
         <div class="container mx-auto px-4">
@@ -63,67 +64,184 @@
         </div>
     </nav>
 
-    <!-- Header -->
-    <div class="bg-blue-600 pt-24">
-        <div class="container mx-auto px-4 py-16 text-white">
-            <h2 class="text-4xl font-bold mb-4" data-aos="fade-right">Colegios Asociados</h2>
-            <p class="text-xl text-blue-100" data-aos="fade-right" data-aos-delay="100">
-                Confeccionamos uniformes para las principales instituciones educativas de la región
-            </p>
-        </div>
-    </div>
-
-    <!-- Mapa de Cobertura -->
-    <div class="container mx-auto px-4 py-16">
-        <div class="bg-white rounded-xl shadow-lg p-8 mb-16" data-aos="fade-up">
-            <h3 class="text-2xl font-bold mb-6 text-center">Nuestra Zona de Cobertura</h3>
-            <div class="grid md:grid-cols-2 gap-8 items-center">
-                <div>
-                    <div class="bg-gray-100 rounded-lg p-6">
-                        <h4 class="font-semibold mb-4">Principales localidades:</h4>
-                        <ul class="space-y-2">
-                            <li class="flex items-center">
-                                <i class="ph-map-pin text-blue-600 mr-2"></i>
-                                Tilisarao
-                            </li>
-                            <li class="flex items-center">
-                                <i class="ph-map-pin text-blue-600 mr-2"></i>
-                                Concarán
-                            </li>
-                            <li class="flex items-center">
-                                <i class="ph-map-pin text-blue-600 mr-2"></i>
-                                Villa del Carmen
-                            </li>
-                            <li class="flex items-center">
-                                <i class="ph-map-pin text-blue-600 mr-2"></i>
-                                Naschel
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="bg-gray-200 rounded-lg overflow-hidden">
-                    <div id="map" style="height: 400px;"></div>
-                </div>
+    <!-- Contenido principal -->
+    <main class="flex-grow pt-24">
+        <!-- Header -->
+        <div class="bg-blue-600">
+            <div class="container mx-auto px-4 py-16 text-white">
+                <h2 class="text-4xl font-bold mb-4" data-aos="fade-right">Colegios Asociados</h2>
+                <p class="text-xl text-blue-100" data-aos="fade-right" data-aos-delay="100">
+                    Confeccionamos uniformes para las principales instituciones educativas de la región
+                </p>
             </div>
         </div>
 
-        <!-- Grid de Colegios -->
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- Colegio Técnico -->
+        <!-- Mapa de Cobertura -->
+        <div class="container mx-auto px-4 py-16">
+            <div class="bg-white rounded-xl shadow-lg p-8 mb-16" data-aos="fade-up">
+                <h3 class="text-2xl font-bold mb-6 text-center">Nuestra Zona de Cobertura</h3>
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <div class="bg-gray-100 rounded-lg p-6">
+                            <h4 class="font-semibold mb-4">Principales localidades:</h4>
+                            <ul class="space-y-2">
+                                <li class="flex items-center">
+                                    <i class="ph-map-pin text-blue-600 mr-2"></i>
+                                    Tilisarao
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="ph-map-pin text-blue-600 mr-2"></i>
+                                    Concarán
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="ph-map-pin text-blue-600 mr-2"></i>
+                                    Villa del Carmen
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="ph-map-pin text-blue-600 mr-2"></i>
+                                    Naschel
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="bg-gray-200 rounded-lg overflow-hidden">
+                        <div id="map" style="height: 400px;"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Grid de Colegios -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- ESCUELA Nº 251 SANTIAGO DEL ESTERO -->
+                <div class="school-card bg-white rounded-xl overflow-hidden shadow-md" data-aos="fade-up">
+                    <div class="relative">
+                        <img src="images colegios/IMG-20250408-WA0000.jpg" alt="Uniforme Colegio Técnico Concarán" class="w-full h-48 object-cover">
+                        <div class="absolute top-4 right-4">
+                            <span class="bg-blue-600 text-white px-4 py-1 rounded-full text-sm"></span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">ESCUELA Nº 251 SANTIAGO DEL ESTERO - Tilisarao</h3>
+                        <p class="text-gray-600 mb-4">Uniformes escolares para educación primaria y jardín de infantes</p>
+                        <div class="space-y-2">
+                            <div class="flex items-center text-sm text-gray-500">
+                                <i class="ph-clothes text-blue-600 mr-2"></i>
+                                Guardapolvos 
+                            </div>
+                            <div class="flex items-center text-sm text-gray-500">
+                                <i class="ph-t-shirt text-blue-600 mr-2"></i>
+                                Remeras institucionales
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Jardín "Pintitas de Colores" -->
+                <div class="school-card bg-white rounded-xl overflow-hidden shadow-md" data-aos="fade-up">
+                    <div class="relative">
+                        <img src="images colegios/IMG-20250408-WA0001.jpg" alt="Uniformes Jardín Pintitas de Colores" class="w-full h-48 object-cover">
+                        <div class="absolute top-4 right-4">
+                            <span class="bg-pink-500 text-white px-4 py-1 rounded-full text-sm">Jardín</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">
+                            Jardín "Ositio Panda"<br>
+                            <span class="text-lg font-medium text-gray-600">Escuela Nº 251 "Santiago del Estero" - Tilisarao</span>
+                        </h3>
+                        <p class="text-gray-600 mb-4">Uniformes escolares para educación inicial y primaria</p>
+                        <div class="space-y-2">
+                            <div class="flex items-center text-sm text-gray-500">
+                                <i class="ph-clothes text-blue-600 mr-2"></i>
+                                Guardapolvos infantiles
+                            </div>
+                            <div class="flex items-center text-sm text-gray-500">
+                                <i class="ph-t-shirt text-blue-600 mr-2"></i>
+                                Remeras con logo institucional
+                            </div>
+                            <div class="flex items-center text-sm text-gray-500">
+                                <i class="ph-baby text-blue-600 mr-2"></i>
+                                Equipo completo para actividades
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CENTRO EDUCATIVO N° 12 LEOPOLDO LUGONES -->
+                <div class="school-card bg-white rounded-xl overflow-hidden shadow-md" data-aos="fade-up">
+                    <div class="relative">
+                        <img src="images colegios/IMG-20250408-WA0002.jpg" alt="Uniforme Colegio Técnico Concarán" class="w-full h-48 object-cover">
+                        <div class="absolute top-4 right-4">
+                            <span class="bg-blue-600 text-white px-4 py-1 rounded-full text-sm"></span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">CENTRO EDUCATIVO N° 12 LEOPOLDO LUGONES" - Tilisarao</h3>
+                        <p class="text-gray-600 mb-4">
+                            Uniformes escolares para educación primaria y secundaria, con diseños modernos y materiales de alta calidad que aseguran comodidad, durabilidad y estilo en cada etapa educativa.
+                        </p>
+                        <div class="space-y-2">
+                            <div class="flex items-center text-sm text-gray-500">
+                                <i class="ph-clothes text-blue-600 mr-2"></i>
+                                Guardapolvos 
+                            </div>
+                            <div class="flex items-center text-sm text-gray-500">
+                                <i class="ph-t-shirt text-blue-600 mr-2"></i>
+                                Remeras institucionales
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Jardín "Osito Panda" -->
+                <div class="school-card bg-white rounded-xl overflow-hidden shadow-md" data-aos="fade-up">
+                    <div class="relative">
+                        <img src="images colegios/IMG-20250408-WA0003.jpg" alt="Uniformes Jardín Pintitas de Colores" class="w-full h-48 object-cover">
+                        <div class="absolute top-4 right-4">
+                            <span class="bg-pink-500 text-white px-4 py-1 rounded-full text-sm">Jardín</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">
+                            Jardín "Osito Panda"<br>
+                            <span class="text-lg font-medium text-gray-600">CENTRO EDUCATIVO N° 12 LEOPOLDO LUGONES" - Tilisarao</span>
+                        </h3>
+                        <p class="text-gray-600 mb-4">
+                            Uniformes infantiles diseñados para el jardín de infantes, con telas suaves, resistentes y cómodas que garantizan la libertad de movimiento y el bienestar de los pequeños durante su jornada escolar.
+                        </p>
+                        <div class="space-y-2">
+                            <div class="flex items-center text-sm text-gray-500">
+                                <i class="ph-clothes text-blue-600 mr-2"></i>
+                                Guardapolvos infantiles
+                            </div>
+                            <div class="flex items-center text-sm text-gray-500">
+                                <i class="ph-t-shirt text-blue-600 mr-2"></i>
+                                Remeras con logo institucional
+                            </div>
+                            <div class="flex items-center text-sm text-gray-500">
+                                <i class="ph-baby text-blue-600 mr-2"></i>
+                                Equipo completo para actividades
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+
+            <!-- Colegio Nuestra Señora Inmaculada -->
             <div class="school-card bg-white rounded-xl overflow-hidden shadow-md" data-aos="fade-up">
                 <div class="relative">
-                    <div class="bg-gray-200 h-48 w-full"></div>
+                    <img src="images%20colegios/IMG-20250408-WA0004.jpg" alt="Uniforme Colegio Nuestra Señora Inmaculada" class="w-full h-48 object-cover">
                     <div class="absolute top-4 right-4">
-                        <span class="bg-blue-600 text-white px-4 py-1 rounded-full text-sm">Técnico</span>
+                        <span class="bg-blue-600 text-white px-4 py-1 rounded-full text-sm">Secundaria</span>
                     </div>
                 </div>
                 <div class="p-6">
-                    <h3 class="text-xl font-semibold mb-2">Colegio Técnico de Concarán</h3>
-                    <p class="text-gray-600 mb-4">Uniformes específicos para actividades técnicas y educación general</p>
+                    <h3 class="text-xl font-semibold mb-2">Colegio Nuestra Señora Inmaculada - Tilisarao</h3>
+                    <p class="text-gray-600 mb-4">Uniformes escolares para educación secundaria, con diseños modernos y materiales de alta calidad que aseguran comodidad, durabilidad y estilo para el día a día.</p>
                     <div class="space-y-2">
                         <div class="flex items-center text-sm text-gray-500">
                             <i class="ph-clothes text-blue-600 mr-2"></i>
-                            Guardapolvos técnicos
+                            Guardapolvos 
                         </div>
                         <div class="flex items-center text-sm text-gray-500">
                             <i class="ph-t-shirt text-blue-600 mr-2"></i>
@@ -133,152 +251,201 @@
                 </div>
             </div>
 
-            <!-- Colegio 2 -->
-            <div class="school-card bg-white rounded-xl overflow-hidden shadow-md" data-aos="fade-up" data-aos-delay="100">
+            <!-- Jardín "Jardín de Infantes" -->
+            <div class="school-card bg-white rounded-xl overflow-hidden shadow-md" data-aos="fade-up">
                 <div class="relative">
-                    <div class="bg-gray-200 h-48 w-full"></div>
+                    <img src="images colegios/IMG-20250408-WA0005.jpg" alt="Uniformes Jardín Pintitas de Colores" class="w-full h-48 object-cover">
+                    <div class="absolute top-4 right-4">
+                        <span class="bg-pink-500 text-white px-4 py-1 rounded-full text-sm">Jardín</span>
+                    </div>
                 </div>
                 <div class="p-6">
-                    <h3 class="text-xl font-semibold mb-2">Instituto de Tilisarao</h3>
-                    <p class="text-gray-600 mb-4">Uniformes completos para todos los niveles educativos</p>
+                    <h3 class="text-xl font-semibold mb-2">
+                        Jardín "Jardín de Infantes"<br>
+                        <span class="text-lg font-medium text-gray-600">Escuela N° 417" - Tilisarao</span>
+                    </h3>
+                    <p class="text-gray-600 mb-4">
+                        Uniformes infantiles diseñados para el jardín de infantes, con telas suaves, resistentes y cómodas que garantizan la libertad de movimiento y el bienestar de los pequeños durante su jornada escolar.
+                    </p>
                     <div class="space-y-2">
                         <div class="flex items-center text-sm text-gray-500">
-                            <i class="ph-hoodie text-blue-600 mr-2"></i>
-                            Uniformes deportivos
+                            <i class="ph-clothes text-blue-600 mr-2"></i>
+                            Guardapolvos infantiles
                         </div>
                         <div class="flex items-center text-sm text-gray-500">
-                            <i class="ph-jacket text-blue-600 mr-2"></i>
-                            Camperas institucionales
+                            <i class="ph-t-shirt text-blue-600 mr-2"></i>
+                            Remeras con logo institucional
+                        </div>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <i class="ph-baby text-blue-600 mr-2"></i>
+                            Equipo completo para actividades
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Colegio 3 -->
-            <div class="school-card bg-white rounded-xl overflow-hidden shadow-md" data-aos="fade-up" data-aos-delay="200">
+            <!-- Colegio Nuestra Señora Inmaculada -->
+            <div class="school-card bg-white rounded-xl overflow-hidden shadow-md" data-aos="fade-up">
                 <div class="relative">
-                    <div class="bg-gray-200 h-48 w-full"></div>
+                    <img src="images%20colegios/IMG-20250408-WA0004.jpg" alt="Uniforme Colegio Nuestra Señora Inmaculada" class="w-full h-48 object-cover">
+                    <div class="absolute top-4 right-4">
+                        <span class="bg-blue-600 text-white px-4 py-1 rounded-full text-sm">Secundaria</span>
+                    </div>
                 </div>
                 <div class="p-6">
-                    <h3 class="text-xl font-semibold mb-2">Escuela Villa del Carmen</h3>
-                    <p class="text-gray-600 mb-4">Uniformes tradicionales y modernos para todos los alumnos</p>
+                    <h3 class="text-xl font-semibold mb-2">Colegio Nuestra Señora Inmaculada - Tilisarao</h3>
+                    <p class="text-gray-600 mb-4">Uniformes escolares para educación secundaria, con diseños modernos y materiales de alta calidad que aseguran comodidad, durabilidad y estilo para el día a día.</p>
                     <div class="space-y-2">
                         <div class="flex items-center text-sm text-gray-500">
-                            <i class="ph-dress text-blue-600 mr-2"></i>
-                            Guardapolvos clásicos
+                            <i class="ph-clothes text-blue-600 mr-2"></i>
+                            Guardapolvos 
                         </div>
                         <div class="flex items-center text-sm text-gray-500">
-                            <i class="ph-pants text-blue-600 mr-2"></i>
-                            Conjuntos completos
+                            <i class="ph-t-shirt text-blue-600 mr-2"></i>
+                            Remeras institucionales
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
 
-    <!-- Sección de Información -->
-    <div class="bg-gray-100 py-16 mt-16">
-        <div class="container mx-auto px-4">
-            <h3 class="text-2xl font-bold text-center mb-12">¿Por qué elegirnos?</h3>
-            <div class="grid md:grid-cols-4 gap-8">
-                <div class="text-center" data-aos="fade-up">
-                    <i class="ph-certificate text-4xl text-blue-600 mb-4"></i>
-                    <h4 class="text-lg font-semibold mb-2">Calidad Garantizada</h4>
-                    <p class="text-gray-600">Materiales de primera calidad y confección profesional, con telas Arciel</p>
-                </div>
-                <div class="text-center" data-aos="fade-up" data-aos-delay="100">
-                    <i class="ph-handshake text-4xl text-blue-600 mb-4"></i>
-                    <h4 class="text-lg font-semibold mb-2">Convenios Escolares</h4>
-                    <p class="text-gray-600">Trabajamos directamente con las instituciones</p>
-                </div>
-                <div class="text-center" data-aos="fade-up" data-aos-delay="200">
-                    <i class="ph-ruler text-4xl text-blue-600 mb-4"></i>
-                    <h4 class="text-lg font-semibold mb-2">A Medida</h4>
-                    <p class="text-gray-600">Ajustes personalizados para cada estudiante</p>
-                </div>
-                <div class="text-center" data-aos="fade-up" data-aos-delay="300">
-                    <i class="ph-clock text-4xl text-blue-600 mb-4"></i>
-                    <h4 class="text-lg font-semibold mb-2">Puntualidad</h4>
-                    <p class="text-gray-600">Entregas en tiempo y forma</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Sección CTA -->
-    <div class="bg-blue-600 py-16">
-        <div class="container mx-auto px-4 text-center">
-            <h3 class="text-2xl font-bold text-white mb-4">¿Eres una institución educativa?</h3>
-            <p class="text-blue-100 mb-8">Contáctanos para establecer un convenio y brindar el mejor servicio a tus estudiantes</p>
-            <a href="contacto.html" class="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition duration-300">
-                Contactar
-            </a>
-        </div>
-    </div>
-
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12">
-        <div class="container mx-auto px-4">
-            <div class="grid md:grid-cols-3 gap-8">
-                <div>
-                    <h4 class="text-xl font-bold mb-4">Per-te Uniformes</h4>
-                    <p class="text-gray-400">Tradición en uniformes escolares desde hace más de 15 años.</p>
-                </div>
-                <div>
-                    <h4 class="text-xl font-bold mb-4">Contacto</h4>
-                    <p class="text-gray-400">Teléfono: [Número]</p>
-                    <p class="text-gray-400">Email: [Email]</p>
-                    <p class="text-gray-400">Dirección: Calle Belgrano y 25 de Mayo, Tilisarao, San Luis</p>
-                </div>
-                <div>
-                    <h4 class="text-xl font-bold mb-4">Horarios</h4>
-                    <p class="text-gray-400">Lunes a Viernes: 9:00 - 18:00</p>
-                    <p class="text-gray-400">Sábados: 9:00 - 13:00</p>
-                </div>
-            </div>
-            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
-                <p class="text-gray-400">&copy; 2024 Per-te Uniformes. Todos los derechos reservados.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        // Inicializar AOS
-        AOS.init({
-            duration: 1000,
-            once: true
-        });
-
-        // Toggle Mobile Menu
-        const toggleBtn = document.getElementById('nav-toggle-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-
-        toggleBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        // Inicializar el mapa con Leaflet
-        var map = L.map('map').setView([-32.7276, -65.2914], 10);
-
-        // Agregar la capa de OpenStreetMap
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '© OpenStreetMap contributors'
-        }).addTo(map);
-
-        // Agregar marcadores para cada localidad
-        var locations = [
-            {name: "Tilisarao", coords: [-32.7276, -65.2914]},
-            {name: "Concarán", coords: [-32.5632, -65.2449]},
-            {name: "Villa del Carmen", coords: [-32.8947, -65.2914]},
-            {name: "Naschel", coords: [-32.9147, -65.3714]}
-        ];
-
-        locations.forEach(function(loc) {
-            L.marker(loc.coords)
-             .bindPopup(loc.name)
-             .addTo(map);
-        });
-    </script>
-</body>
-</html>
+                        <!-- Escuela Técnica N°26 Gobernador Elías Adre -->
+                        <div class="school-card bg-white rounded-xl overflow-hidden shadow-md" data-aos="fade-up">
+                            <div class="relative">
+                                <img src="images%20colegios/IMG-20250408-WA0007.jpg" alt="Uniforme Escuela Técnica N°26" class="w-full h-48 object-cover">
+                                <div class="absolute top-4 right-4">
+                                    <span class="bg-blue-600 text-white px-4 py-1 rounded-full text-sm">Técnica</span>
+                                </div>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-semibold mb-2">Escuela Técnica N°26 Gobernador Elías Adre - Concarán</h3>
+                                <p class="text-gray-600 mb-4">Uniformes especializados para educación técnica, diseñados con materiales resistentes y adaptados para las actividades prácticas en talleres.</p>
+                                <div class="space-y-2">
+                                    <div class="flex items-center text-sm text-gray-500">
+                                        <i class="ph-tools text-blue-600 mr-2"></i>
+                                        Ropa de trabajo para talleres
+                                    </div>
+                                    <div class="flex items-center text-sm text-gray-500">
+                                        <i class="ph-t-shirt text-blue-600 mr-2"></i>
+                                        Uniformes institucionales
+                                    </div>
+                                    <div class="flex items-center text-sm text-gray-500">
+                                        <i class="ph-shield-check text-blue-600 mr-2"></i>
+                                        Elementos de protección personal
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        </div> <!-- Cierre del grid de colegios -->
+            
+                        <!-- Sección de Información -->
+                        <div class="bg-gray-100 py-16 mt-16">
+                            <div class="container mx-auto px-4">
+                                <h3 class="text-2xl font-bold text-center mb-12">¿Por qué elegirnos?</h3>
+                                <div class="grid md:grid-cols-4 gap-8">
+                                    <div class="text-center" data-aos="fade-up">
+                                        <i class="ph-certificate text-4xl text-blue-600 mb-4"></i>
+                                        <h4 class="text-lg font-semibold mb-2">Calidad Garantizada</h4>
+                                        <p class="text-gray-600">Materiales de primera calidad y confección profesional</p>
+                                    </div>
+                                    <div class="text-center" data-aos="fade-up" data-aos-delay="100">
+                                        <i class="ph-handshake text-4xl text-blue-600 mb-4"></i>
+                                        <h4 class="text-lg font-semibold mb-2">Convenios Escolares</h4>
+                                        <p class="text-gray-600">Trabajamos directamente con las instituciones</p>
+                                    </div>
+                                    <div class="text-center" data-aos="fade-up" data-aos-delay="200">
+                                        <i class="ph-ruler text-4xl text-blue-600 mb-4"></i>
+                                        <h4 class="text-lg font-semibold mb-2">A Medida</h4>
+                                        <p class="text-gray-600">Ajustes personalizados para cada estudiante</p>
+                                    </div>
+                                    <div class="text-center" data-aos="fade-up" data-aos-delay="300">
+                                        <i class="ph-clock text-4xl text-blue-600 mb-4"></i>
+                                        <h4 class="text-lg font-semibold mb-2">Puntualidad</h4>
+                                        <p class="text-gray-600">Entregas en tiempo y forma</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <!-- Sección CTA -->
+                        <div class="bg-blue-600 py-16">
+                            <div class="container mx-auto px-4 text-center">
+                                <h3 class="text-2xl font-bold text-white mb-4">¿Eres una institución educativa?</h3>
+                                <p class="text-blue-100 mb-8">Contáctanos para establecer un convenio y brindar el mejor servicio a tus estudiantes</p>
+                                <a href="contacto.html" class="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition duration-300">
+                                    Contactar
+                                </a>
+                            </div>
+                        </div>
+                    </main>
+            
+                    <!-- Footer -->
+                    <footer class="bg-gray-900 text-white py-12">
+                        <div class="container mx-auto px-4">
+                            <div class="grid md:grid-cols-3 gap-8">
+                                <div>
+                                    <h4 class="text-xl font-bold mb-4">Per-te Uniformes</h4>
+                                    <p class="text-gray-400">Tradición en uniformes escolares desde hace más de 10 años.</p>
+                                </div>
+                                <div>
+                                    <h4 class="text-xl font-bold mb-4">Contacto</h4>
+                                    <p class="text-gray-400">
+                                        <a href="tel:+5492664543899" class="hover:text-blue-400 transition duration-300">
+                                            Teléfono: +54 9 266 4543899
+                                        </a>
+                                    </p>
+                                    <p class="text-gray-400">
+                                        <a href="tel:+5492664505510" class="hover:text-blue-400 transition duration-300">
+                                            Teléfono: +54 9 266 4505510
+                                        </a>
+                                    <p class="text-gray-400">Email: [Email]</p>
+                                    <p class="text-gray-400">Dirección: Calle Belgrano y 25 de Mayo, Tilisarao, San Luis</p>
+                                </div>
+                                <div>
+                                    <h4 class="text-xl font-bold mb-4">Horarios</h4>
+                                    <p class="text-gray-400">Lunes a Viernes: 10:00 a 12:30 - 18:00 a 20:00</p>
+                                    <p class="text-gray-400">Sábados: 10:00 a 12:30</p>
+                                </div>
+                            </div>
+                            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+                                <p class="text-gray-400">&copy; 2025 Per-te Uniformes. Todos los derechos reservados.</p>
+                            </div>
+                        </div>
+                    </footer>
+            
+                    <script>
+                        // Inicializar AOS
+                        AOS.init({
+                            duration: 1000,
+                            once: true
+                        });
+            
+                        // Toggle Mobile Menu
+                        const toggleBtn = document.getElementById('nav-toggle-btn');
+                        const mobileMenu = document.getElementById('mobile-menu');
+            
+                        toggleBtn.addEventListener('click', () => {
+                            mobileMenu.classList.toggle('hidden');
+                        });
+            
+                        // Inicializar el mapa con Leaflet
+                        var map = L.map('map').setView([-32.7276, -65.2914], 10);
+            
+                        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                            attribution: '© OpenStreetMap contributors'
+                        }).addTo(map);
+            
+                        var locations = [
+                            {name: "Tilisarao", coords: [-32.7276, -65.2914]},
+                            {name: "Concarán", coords: [-32.5632, -65.2449]},
+                            {name: "Villa del Carmen", coords: [-32.8947, -65.2914]},
+                            {name: "Naschel", coords: [-32.9147, -65.3714]}
+                        ];
+            
+                        locations.forEach(function(loc) {
+                            L.marker(loc.coords)
+                             .bindPopup(loc.name)
+                             .addTo(map);
+                        });
+                    </script>
+                </body>
+            </html>
